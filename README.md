@@ -22,7 +22,7 @@ Save as `poc.py` and use `source /path/to/poc.py`.
 import gdb
 gdb.selected_inferior().read_memory(0, 18446744073709551615)
 ```
-
+The following is an outdated reproduction. I found that even without loading any binary program, the vulnerability can still be reproduced. If I write 'source /path/to/poc.py' in .gdbinit or even hide it within the plugin code loaded by the gdbinit file, it will cause the vulnerability to be triggered every time gdb is run.
 ## Vulnerability Reproduction
 
 We exploited this in the newest GDB (14.2), and here are the details of my operating system:
