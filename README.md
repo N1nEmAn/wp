@@ -1,6 +1,6 @@
 ## Exploit **GDB 8.1~14.2 memory corruption** 
 
-Google Dork:gdb, memory leak, memory exhausted.
+Google Dork:gdb, memory leak, memory exhausted， memory out-of-bounds.
 
 Date: 2024.4.2
 
@@ -44,7 +44,7 @@ GPU: AMD ATI Radeon 680M
 ![image-20240402211541005](./2.png)
 
 ### 3. source poc.py
-
+We can see successful memory out-of-bounds access and corruption.
 ![image-20240402211613585](./3.png)
 
 ![image-20240402212709525](./4.png)
