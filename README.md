@@ -52,3 +52,6 @@ GPU: AMD ATI Radeon 680M
 ### 4. in Ubuntu
 
 ![image-20240402212845142](./5.png)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjYzNDQ2MTUwXX0=
+-->
