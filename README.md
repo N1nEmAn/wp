@@ -58,3 +58,5 @@ We can see successful memory out-of-bounds access and corruption.
 ## POC-new
 ### just run gdb and source the poc (without debugging anything)
 ![image](https://github.com/N1nEmAn/wp/assets/118088443/4da536f9-3a63-4daf-88ef-073f21cca1d0)
+![image](https://github.com/N1nEmAn/wp/assets/118088443/78d12fb7-c4d5-4d48-b0d6-64a96e283f27)
+
