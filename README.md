@@ -14,7 +14,7 @@ Version: 8.1~14.2  (currently known, and possibly more)
 
 Tested on: Ubuntu18.02、archlinux-2024
 
-## POC
+## POC-old
 
 Save as `poc.py` and use `source /path/to/poc.py`.
 
@@ -54,3 +54,7 @@ We can see successful memory out-of-bounds access and corruption.
 ### 4. in Ubuntu
 
 ![image-20240402212845142](./5.png)
+
+## POC-new
+just run gdb and source the poc.
+![image](https://github.com/N1nEmAn/wp/assets/118088443/4da536f9-3a63-4daf-88ef-073f21cca1d0)
