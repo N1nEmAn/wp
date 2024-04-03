@@ -56,5 +56,5 @@ We can see successful memory out-of-bounds access and corruption.
 ![image-20240402212845142](./5.png)
 
 ## POC-new
-### just run gdb and source the poc
+### just run gdb and source the poc (without debugging anything)
 ![image](https://github.com/N1nEmAn/wp/assets/118088443/4da536f9-3a63-4daf-88ef-073f21cca1d0)
